@@ -1,0 +1,47 @@
+"""
+CTI 110
+P1HW1 - variables
+muharram
+9/5/23
+
+do some basic output with numbers 
+1. ask for an int
+2. square it and then cub it
+3. ask for another int
+4. add them and multiply them
+
+"""
+# part 1
+# variables, first and second 
+first = 0
+second = 0
+
+print("enter integer:")
+first = int(input()) # take input, then convert it to int 
+print(first, "squared is",first * first)
+print("and", first,"cubed is",first * first * first, "!!")
+
+# get another int 
+print("enter another intger:")
+second = int(input())
+# TODO: print the number, not the words first and second
+#print("first + second =", first + second )
+print(first, "+", second, "=", first + second)
+#print("first * second =", first * second)
+print(first, "*", second, "=", first * second)
+
+
+# part two: movies
+# three variables
+#string - movie name
+# int- the year of the movie
+#float- the goes ( in million dollars)
+# finally, print a quto from the movie 
+name = "Black Panther"
+year= 2018
+gross = 1.349 # mil $
+
+# print out this information
+# then print a movie quote 
+print("the movie name black panther","year 2018","gross 1.349 mil")
+print("quote","You Are a Good Man with a Good Heart, and It's Hard for a Good Man to Be a King")
