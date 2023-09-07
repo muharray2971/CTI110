@@ -1,0 +1,59 @@
+"""
+This is the Template Repl for Python with Turtle.
+
+Python with Turtle lets you make graphics easily in Python.
+
+Check out the official docs here: https://docs.python.org/3/library/turtle.html
+"""
+
+import turtle
+
+t = turtle.Turtle()
+# comment block
+"""
+for c in ['red', 'green', 'blue', 'Purple']:
+    t.color(c)
+    t.forward(75)
+    t.right(90)
+    """
+
+t.color("black")
+t.pensize(3)
+#t.penup()
+t.forward(100)
+t.left(90)
+t.forward(100)
+t.left(90)
+t.forward (100)
+t.left(90)
+t.forward(100)
+
+t.color("darkred")
+t.forward(100)
+t.right(120)
+t.forward(100)
+t.right(120)
+t.forward(100)
+t.right(120)
+
+
+
+
+t=turtle.Turtle()
+t.penup()
+t.goto(-30,50) #centering in the screen
+t.pendown()
+t.pensize(10)
+t.pencolor("red")
+t.right(65)
+t.forward(100)
+t.left(130)
+t.forward(100)
+ 
+t.penup()
+t.goto(13,-43)
+t.left(25)
+t.pendown()
+t.backward(100)
+t.penup()
+
