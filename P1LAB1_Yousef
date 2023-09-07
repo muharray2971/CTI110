@@ -1,0 +1,15 @@
+"""
+CTI 110
+P1LAB1
+Yousef
+8/24/2023
+"""
+
+# say hello to the user 
+print("hello! what's your name?")
+
+#get the user's name
+name = input()
+
+print(name, "is a nice name!")
+
