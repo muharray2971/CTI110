@@ -1,0 +1,35 @@
+"""
+CTI 110
+P2LAB1
+Muharram
+9/7/23
+
+ Write a program with a car's gas milage (miles/gallon) and the cost of gas (dollars/gallon) as floating-point input, and output the gas cost for 20 miles, 75 miles, and 500 miles.
+
+Output each floating-point value with two digits after the decimal point, which can be achieved as follows:
+print(f'{your_value1:.2f} {your_value2:.2f} {your_value3:.2f}')
+
+
+
+"""
+# ask for miles per gollan
+miles_per_gallon = float(input("what is the car's MPG? "))
+# ask for price per gallon of gas
+Price_per_gallon = float(input("price per gallon? "))
+
+# show the price per mile to drive
+# unit we want is $/miles
+Price_per_mile = Price_per_gallon / miles_per_gallon
+
+#print("this vehicle costs $ ", price_per_mile,"to drive 1 mile.")
+# f strings are like this: {variable:.2f} for 2 decimal place
+print("this vehicle cost $",Price_per_gallon, "to drive 1 miles.")
+
+# last step: tell the use the cost to drive 20, 75, and 500 milles
+print("this cost $",Price_per_mile *20 , "to drive 20 miles")
+print("this vehicle cost $", Price_per_mile * 75 ,"to drive 75 miles ")
+print("this vehicle cost $", Price_per_mile * 500," to drive 500 miles ")
+# with f strings (you only need one or the other )
+print(f"this cost ${Price_per_mile * 20:.2f}, to drive 20 miles ")
+print(f"this vehicle cost $ {Price_per_mile * 75:.2f} to drive 75 miles")
+print(f"this vehicle cost $ {Price_per_mile * 500:.2f} to drive 500 miles")
