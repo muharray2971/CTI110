@@ -1,0 +1,36 @@
+# A brief description of the project
+
+# Date
+
+# CTI-110 P1HW2 - Travel Expense 
+# name Yousef muharram 
+
+# Step 3: Ask the user to enter their budget
+budget = float(input("Enter your budget: "))
+
+# Step 4: Ask the user to enter their travel destination
+destination = input("Enter your travel destination: ")
+
+# Step 5: Ask the user for the amount they will spend on gas
+gas_expense = float(input("How much will you spend on gas? "))
+
+# Step 6: Ask the user for the amount they will spend on accommodation
+accommodation_expense = float(input("Approximately how much will you need for accommodation/hotel? "))
+
+# Step 7: Ask the user for the amount they will spend on food
+food_expense = float(input("Last, how much do you need for food? "))
+
+# Step 8: Calculate the total expenses
+total_expenses = gas_expense + accommodation_expense + food_expense
+
+# Step 9: Subtract expenses from the budget
+remaining_balance = budget - total_expenses
+
+# Step 10: Display the results
+print("\n- Travel Expenses -")
+print(f"Location: {destination}")
+print(f"Initial Budget: {budget}")
+print(f"Fuel: {gas_expense}")
+print(f"Accommodation: {accommodation_expense}")
+print(f"Food: {food_expense}")
+print(f"Remaining Balance: {remaining_balance}")
