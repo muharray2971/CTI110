@@ -1,0 +1,26 @@
+# Initialize variables to store grade-related information
+grades = []
+lowest_grade = float('inf')  # Initialize lowest_grade as positive infinity
+highest_grade = float('-inf')  # Initialize highest_grade as negative infinity
+sum_of_grades = 0
+
+# Prompt the user to enter grades for six modules
+for i in range(1, 7):
+    grade = float(input(f'Enter grade for Module {i}: '))
+    grades.append(grade)  # Add the grade to the list
+    sum_of_grades += grade  # Add the grade to the sum
+
+    if grade < lowest_grade:
+        lowest_grade = grade  # Update lowest_grade if a lower grade is encountered
+    if grade > highest_grade:
+        highest_grade = grade  # Update highest_grade if a higher grade is encountered
+
+# Calculate the average grade
+average_grade = sum_of_grades / len(grades)
+
+# Display the results
+print("-Results--")
+print(f"Lowest Grade : {lowest_grade:.1f}")
+print(f"Highest Grade : {highest_grade:.1f}")
+print(f"Sum of Grades : {sum_of_grades:.1f}")
+print(f"Average : {average_grade:.2f}")
