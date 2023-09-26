@@ -1,0 +1,60 @@
+"""
+CTI 110
+P3t2 - make and menu
+muharram
+9/26/23
+"""
+# the most simple program, with main ()
+def main():
+  # print the menu 
+  print("_"*10,"main menu", "_"*10)
+  print("1. order lunch")
+  print("2. option two")
+  print("3. option three")
+  
+  #let the user choose
+  print("your choice?", end=" ")
+  choice = int(input())
+  print("you chose:",choice)
+  
+  # branch (if) on choice 
+  if choice == 1:
+    option_1()
+  elif choice == 2:
+    option_2()
+  elif choice == 3: 
+    option_3()
+  else:
+    print("sorry, that's not an option. ")
+  
+
+def option_1():
+  print (" order lunch 1")
+  print("would you like a burger or a salad ?")
+  food = input()
+  if food == "burger":
+    print("one burger,coming up")
+  elif food == "salad": 
+    print("dressing on the side ")
+  else:
+    print("we don't have any", food)
+    
+def option_2(): 
+  print("this is my option 2")
+
+def option_3():
+  print (" buy a car or a bike")
+  print("would you like to buy a car or a bike ?")
+  vehicles = input()
+  if vehicles == "car":
+    print("would you like to see the next vehicles,they are on the show room ")
+  elif vehicles == "bike": 
+    print("vehicles on the show room ")
+  else:
+    print("we don't have any", vehicles)
+
+
+
+
+# start the program 
+main()
