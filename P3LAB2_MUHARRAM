@@ -1,0 +1,28 @@
+"""
+CTI 110
+P3LAB2_ letter grades
+muharram
+9/28/23
+
+convert a number grade int a letter grade. (ten point scale)
+"""
+
+print("enter the number grade:", end="")
+num_grade = int(input())
+
+letter_grade = "G"
+# DO THE CONVERSION
+if num_grade >= 90:
+  letter_grade = "a"
+elif num_grade >= 80:
+  letter_grade = "B"
+  # todo: add c,d,f
+if num_grade >= 70:
+  letter_grade = "c"
+elif num_grade >= 60:
+  letter_grade = "d"
+else: 
+    letter_grade = "f"
+# print the letter grade 
+print(" a grade of",num_grade,"is a", letter_grade)
+
