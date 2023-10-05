@@ -1,0 +1,36 @@
+#CTI 110
+#P4T2- timr cards
+#muharram
+#10/5/23
+
+# get the user's work info for the week
+# find the pay
+"""
+# take 1 :us a list 
+hours = [8,8,8,7,9]
+print("you worked")
+total_hours = sum(hours)
+print(total_hours, "hours")
+print("longest shift was", max(hours), "hours")
+print("shortest shidt was", min(hours), "hours")
+# find the average
+print("for an average of", average, "hours per shift.")
+"""
+
+# take 2 : by hand
+print("timecard program")
+# set up variables
+DAYS_OF_WEEK = 5 # constant
+todays_hours = 0
+total_hours  = 0
+# ask for time worked for each day
+# and take a running total 
+for day in range(DAYS_OF_WEEK):
+    print("hours worked for day", day+1, end=":") #we'll print 1-5, not 0-4
+    today_hours =float(input())
+    #total_hours = total_hpurs + today_hours # or,
+    total_hours += today_hours # shortcut += operator
+#print the total and average hours
+print("total hours this week:" , total_hours)
+average_hours = total_hours /DAYS_OF_WEEK
+print("average shift time:", average_hours, "hour")
