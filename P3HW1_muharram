@@ -1,0 +1,28 @@
+# CTI 110 
+# P3HW1
+# muharram
+# 9-26-23
+
+
+# Initialize an empty list to store grades
+grades = []
+
+# Enter grades for six modules using a loop
+for i in range(6):
+    grade = float(input(f'Enter grade for Module {i + 1}: '))
+    grades.append(grade)
+
+# Calculate the average of the grades
+avg = sum(grades) / len(grades)
+
+# Determine the letter grade for the average
+if avg >= 90:
+    print('Your grade is: A')
+elif avg >= 80:
+    print('Your grade is: B')
+elif avg >= 70:
+    print('Your grade is: C')
+elif avg >= 60:
+    print('Your grade is: D')
+else:
+    print('Your grade is: F')
