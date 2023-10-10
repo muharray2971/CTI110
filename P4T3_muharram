@@ -1,0 +1,65 @@
+# CTI 110
+# p4t3 - three loops
+# muharram
+#10/10/23
+
+# write three loops 
+# 1. for loop
+# 2. while loop
+# 3. while with sentientl 
+# for each of these, do the following
+# ask the user how many cars they saw today 
+# find the total and the average 
+Max_day = 5
+day=1
+cars_today = 0
+cars_total = 0
+average = 0 
+
+# 1 - for loop
+print("enter how many cars you saw each day") 
+for day in range (Max_day+1):
+ print("day #", day, end=": ")
+ cars_today = int(input())
+ cars_total =cars_total + cars_today
+# print the total 
+print("total cars = ", cars_total)
+average = cars_total / Max_day
+print("average per day =", average)
+
+# 2 - while loop
+day=1
+cars_today = 0
+cars_total = 0
+
+print("Enter how number of cars you saw today")
+while day <= Max_day:
+  print("day #", day, end=": ")
+  cars_today = int(input())
+  cars_total = cars_today + cars_total
+  day = day + 1
+print("total cars = ", cars_total)
+average = cars_total / Max_day
+print("average per day =" , average)
+
+# take 3 - "sentinel"
+cars_total = 0
+print("\n\Enter -1 to finish")
+DONE_VALUE = -1 # if they tpe this, finish 
+# go until they say to stop with DONE_VALUE
+keep_going = True
+days= 0
+while keep_going:
+  print("cars seen today:", end= "")
+  cars_today = int(input())
+  if cars_today == DONE_VALUE: 
+    # exit
+    keep_going = False
+  else:
+    # add the value to total 
+    cars_total = cars_total + cars_today
+    days = days + 1
+print(" total cars = ", cars_total) 
+print(" over", days, "days")
+average = cars_total / days 
+print("average ", average)
