@@ -1,0 +1,50 @@
+# CTI-110
+# P4HW1 - Score List
+
+# Muharram
+# Date
+
+# Ask the user for the number of scores to enter
+num_scores = int(input("How many scores do you want to enter? "))
+
+# Initialize a list to store the valid scores
+scores = []
+
+# Loop to collect scores
+for i in range(1, num_scores + 1):
+    while True:
+        score = int(input(f"Enter score #{i}: "))
+        if 0 <= score <= 100:
+            # Score is valid, add it to the list
+            scores.append(score)
+            break
+        else:
+            print("Invalid score entered!")
+            print("Score should be between 0 and 100. Please enter a valid score.")
+
+# Calculate lowest score
+lowest_score = min(scores)
+
+# Remove the lowest score from the list
+scores.remove(lowest_score)
+
+# Calculate the average of the remaining scores
+average = sum(scores) / len(scores)
+
+# Determine the letter grade
+if 90 <= average <= 100:
+    grade = "A"
+elif 80 <= average < 90:
+    grade = "B"
+elif 70 <= average < 80:
+    grade = "C"
+elif 60 <= average < 70:
+    grade = "D"
+else:
+    grade = "F"
+
+# Display results
+print("Lowest score entered:", lowest_score)
+print("Score List after dropping lowest score:", scores)
+print("Average of scores in modified list:", average)
+print("Letter grade:", grade)
