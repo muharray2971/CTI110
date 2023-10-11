@@ -1,0 +1,61 @@
+# CTI-110
+# P4HW2 
+
+# Muharram
+# 10/10/23
+
+
+
+# Initialize variables for totals
+overtime_total = 0
+regular_pay_total = 0
+gross_pay_total = 0
+employee_count = 0
+
+while True:
+    # Ask the user to enter the employee's name or "Done" to terminate
+    employee_name = input("Enter employee name (or 'Done' to quit): ")
+
+    if employee_name.lower() == 'done':
+        # User wants to exit the program
+        break
+
+    # Ask the user to enter the number of hours worked and the pay rate
+    hours_worked = float(input("Enter the number of hours worked: "))
+    pay_rate = float(input("Enter the pay rate: "))
+
+    # Calculate overtime hours and regular hours
+    if hours_worked > 40:
+        overtime_hours = hours_worked - 40
+        regular_hours = 40
+    else:
+        overtime_hours = 0
+        regular_hours = hours_worked
+
+    # Calculate overtime pay and regular pay
+    overtime_pay = overtime_hours * (pay_rate * 1.5)
+    regular_pay = regular_hours * pay_rate
+
+    # Calculate gross pay
+    gross_pay = regular_pay + overtime_pay
+
+    # Update totals
+    overtime_total += overtime_pay
+    regular_pay_total += regular_pay
+    gross_pay_total += gross_pay
+    employee_count += 1
+
+    # Display individual employee information
+    print("\nEmployee Name:", employee_name)
+    print("Pay Rate: $", pay_rate)
+    print("Hours Worked:", hours_worked)
+    print("Overtime Hours:", overtime_hours)
+    print("Overtime Pay: $", overtime_pay)
+    print("Pay for Regular Hours: $", regular_pay)
+    print("Gross Pay: $", gross_pay)
+
+# Display totals and number of employees processed
+print("\nTotal Overtime Pay: $", overtime_total)
+print("Total Regular Pay: $", regular_pay_total)
+print("Total Gross Pay: $", gross_pay_total)
+print("Number of Employees Processed:", employee_count)
