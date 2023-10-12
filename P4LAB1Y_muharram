@@ -1,0 +1,65 @@
+"""
+check out the official doc here: https://docs.org./3/libaray/turtle.html
+
+CTI 110
+P4LAB1Y_ 
+muharram
+10/12/23
+"""
+
+from sre_constants import REPEAT
+import turtle
+import random
+#keep window open
+
+t = turtle.Turtle()
+t.pensize(3)
+# set our variables - color, sides , size, and fill in or not
+colors = ["red", "blue","green","yellow","purple","orange"]
+
+
+REPEAT = 10
+for time in range(REPEAT):
+  X = random.randrange(-200,200)
+  Y = random.randrange(-200,200)
+  t.penup()
+  t.goto(X, Y)
+  t.pendown()
+  PEN_COLOR = random.choice(colors)
+  SIDES = 3 
+  LENGHT = 100
+  ANGLE = 360/ SIDES
+  FILL = True 
+  PEN_COLOR = random.choice(colors)
+  FILL_COLOR= random.choice(colors)
+  
+  # optional:let user pick
+  #SIDES = int(input("how many sides")
+  #LENGTH = int(Input("how long is each side")
+  SIDES = random.randrange(3, 12)
+  LENGHT = random.randrange(10, 50)
+  ANGLE = 360 / SIDES
+  
+  if FILL == True:
+    t.begin_fill()
+    t.fillcolor(FILL_COLOR)
+  
+  # draw a smiple shape
+    t.pencolor(PEN_COLOR)
+  for side in range(SIDES):
+    # draw a triangle on each side to make a star
+  
+    #draw the side of the shape 
+    t.forward(LENGHT)
+    t.right(ANGLE)
+ 
+      
+  if FILL == True:
+    t.end_fill()
+  
+  if FILL == True:
+    t.end_fill()
+
+# keep window open (at end) until clicked on
+win = turtle.Screen()
+win.exitonclick()
