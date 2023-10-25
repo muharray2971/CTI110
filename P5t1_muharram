@@ -1,0 +1,20 @@
+# cti 110 
+#P5T1 - functions
+#muharram
+#10/24
+
+def main():
+  print("hello world!")
+  burger = 4.9990000001
+  print_money(burger)
+  print_money(12)
+  print_money(0.3)
+  # main () ends
+
+  # other fuction go here
+def print_money(amount):
+  print("$", format(amount, ".2f"), sep="")
+
+
+# Now, start the program 
+main()
