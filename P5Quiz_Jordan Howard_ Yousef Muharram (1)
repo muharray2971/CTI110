@@ -1,0 +1,32 @@
+# Name Jordan Howard, Yousef Muharram
+# Define functions
+
+def getLength():
+    length = float(input("Please input the Length of the rectangle: "))
+    return length
+  # CTI 110
+  # Yousef Muharram
+  # Jordan Howard
+  # P5Quiz
+  # 11/9/2023
+
+def getWidth():
+    width = float(input("Please enter the width of the rectangle: "))
+    return width
+
+def getArea(length, width):
+    area = float(length * width)
+    return area
+
+def displayData(length, width, area):
+    print("The length of the rectangle is: ", length)
+    print("The width of the rectangle is: ", width)
+    print("The area of the rectangle is: ", area)
+
+# Define variables
+length = getLength()
+width = getWidth()
+area = getArea(length, width)
+
+# start the program
+displayData(length, width, area)
